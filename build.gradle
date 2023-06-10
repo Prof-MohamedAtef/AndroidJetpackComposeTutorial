@@ -14,6 +14,13 @@ buildscript {
         compose_activity_version = '1.6.1'
         viewmodel_compose_version = '2.5.1'
         navigation_compose = "2.5.3"
+        lottie_compose_version = '5.2.0'
+        converter_gson_version = '2.9.0'
+        hilt_version = '2.44.2'
+        compose_hilt_nav_version = '1.0.0'
+    }
+    dependencies {
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.44'
     }
 }
 plugins {

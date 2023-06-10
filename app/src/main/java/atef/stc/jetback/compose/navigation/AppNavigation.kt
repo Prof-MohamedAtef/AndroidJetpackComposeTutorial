@@ -10,9 +10,10 @@ import atef.stc.jetback.compose.route.Screen
 import atef.stc.jetback.compose.route.screens.DetailsScreen
 import atef.stc.jetback.compose.route.screens.MainScreen
 import atef.stc.jetback.compose.route.screens.SplashScreen
+import atef.stc.jetback.compose.viewmodels.AppHomeViewModel
 
 @Composable
-fun AppNavigation() {
+fun AppNavigation(viewModel: AppHomeViewModel) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = Screen.SplashScreen.route) {
         composable(route = Screen.SplashScreen.route) {
@@ -31,7 +32,7 @@ fun AppNavigation() {
                 }
             )
         ) { entry ->
-            DetailsScreen(name = entry.arguments?.getString("name"))
+            DetailsScreen(name = entry.arguments?.getString("name"), viewModel)
         }
     }
 }

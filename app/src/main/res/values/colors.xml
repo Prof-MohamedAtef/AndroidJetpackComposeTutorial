@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="home_top_reward_points_container_bg">#4c241a29</color>
+    <color name="home_search_container_bg">#66131728</color>
+    <color name="home_search_text_color">#d2d4d9</color>
+    <color name="light_orange">#80eab719</color>
 </resources>

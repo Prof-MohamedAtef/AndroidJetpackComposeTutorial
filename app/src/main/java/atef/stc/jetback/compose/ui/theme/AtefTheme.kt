@@ -72,7 +72,7 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 @Composable
-fun SmilesTheme(
+fun AtefTheme(
     darkTheme: Boolean = false, // isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
@@ -97,8 +97,8 @@ fun SmilesTheme(
         }
     }
 
-    AppCompatTheme(
-//        colorScheme = colorScheme,
+    MaterialTheme(
+        colorScheme = colorScheme,
 //        typography = Typography,
         content = content
     )

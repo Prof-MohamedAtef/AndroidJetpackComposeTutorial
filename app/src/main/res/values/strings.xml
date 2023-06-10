@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidComposeTutorial</string>
+    <string name="verify_reward">Verify your account to earn reward</string>
+    <string name="viewAll">View all</string>
 </resources>

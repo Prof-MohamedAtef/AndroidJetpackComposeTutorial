@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -61,6 +64,13 @@ dependencies {
     api "androidx.activity:activity-compose:$v.compose_activity_version"
     api "androidx.lifecycle:lifecycle-viewmodel-compose:$v.viewmodel_compose_version"
     api "androidx.navigation:navigation-compose:$v.navigation_compose"
+    api "com.google.accompanist:accompanist-swiperefresh:$v.appcompat_compose"
+
+    implementation "com.google.dagger:hilt-android:$v.hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$v.hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$v.hilt_version"
+
+    api "androidx.hilt:hilt-navigation-compose:$v.compose_hilt_nav_version"
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
@@ -78,4 +88,12 @@ dependencies {
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+    implementation("io.coil-kt:coil-compose:2.4.0")
+    api "com.airbnb.android:lottie-compose:$v.lottie_compose_version"
+
+    implementation "com.squareup.retrofit2:converter-gson:$v.converter_gson_version"
+}
+
+kapt {
+    correctErrorTypes true
 }
