@@ -60,6 +60,7 @@ dependencies {
     api "androidx.lifecycle:lifecycle-runtime-compose:$v.lifecycle_runtime_compose_version"
     api "androidx.activity:activity-compose:$v.compose_activity_version"
     api "androidx.lifecycle:lifecycle-viewmodel-compose:$v.viewmodel_compose_version"
+    api "androidx.navigation:navigation-compose:$v.navigation_compose"
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
