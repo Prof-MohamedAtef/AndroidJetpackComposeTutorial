@@ -4,4 +4,7 @@
  - Add dependencies to your android project
  - Create a theme for your application
  - Add Navigation components with Android Jetpack compose to your project
- - Using LazyColumn, LazyRow, BottomSheet
+ - Using LazyColumn, LazyRow, BottomSheet, SwiptToRefresh
+ - Using UiStates
+ - Using colors, typography, and other resources
+ - Using Hilt with Android ViewModel
