@@ -5,7 +5,7 @@ import atef.stc.jetback.compose.models.SectionDetails
 
 data class HomeCategoriesListState(
     val data: List<ItemCategoriesDetails> = getDummyItemCategories(),
-    override var sectionDetails: SectionDetails? = null,
+    override var sectionDetails: SectionDetails? = SectionDetails(title = "Categories", subTitle = "Pick appropriate Items"),
     override var isLoading: Boolean = false,
     override var hasError: Boolean = false,
 ) : SectionBaseUIState(isLoading, hasError, sectionDetails)
