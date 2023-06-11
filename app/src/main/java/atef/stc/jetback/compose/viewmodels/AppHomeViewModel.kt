@@ -8,6 +8,7 @@ import atef.stc.jetback.compose.models.TopBrandsListState
 import atef.stc.jetback.compose.uistate.CollectionsUIState
 import atef.stc.jetback.compose.uistate.EmailLinkVerificationUIState
 import atef.stc.jetback.compose.uistate.HomeCategoriesListState
+import atef.stc.jetback.compose.uistate.ServicesNumbersUiState
 import atef.stc.jetback.compose.uistate.SubscriptionUiState
 import atef.stc.jetback.compose.uistate.TodaysTopOffersUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -48,6 +49,10 @@ class AppHomeViewModel  @Inject constructor(
         MutableStateFlow<BirthdayGiftUiState>(BirthdayGiftUiState())
     val birthdayGift = _birthdayGift.asStateFlow()
 
+    private var _servicesNumbersUiState =
+        MutableStateFlow<ServicesNumbersUiState>(ServicesNumbersUiState())
+    val servicesNumbersUiState = _servicesNumbersUiState.asStateFlow()
+
     fun getSections() {
         _screenUiState.update {
             it.copy(isLoading = true, isPullRefreshing = true)
@@ -58,7 +63,7 @@ class AppHomeViewModel  @Inject constructor(
     fun makeDelayAfter(interval: Long){
         Handler(Looper.getMainLooper()).postDelayed({
             _screenUiState.update {
-                it.copy(isLoading = true, isPullRefreshing = true)
+                it.copy(isLoading = false, isPullRefreshing = false)
             }
         }, interval)
     }

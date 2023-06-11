@@ -50,6 +50,15 @@ fun MainScreen(navController: NavController) {
             ) {
                 Text(text = "To Detail Screen")
             }
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = {
+                    navController.navigate(Screen.ServiceNumbers.withArgs(text))
+                },
+                modifier = Modifier.align(Alignment.End)
+            ) {
+                Text(text = "To Service Numbers Screen")
+            }
         }
     }
 }

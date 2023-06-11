@@ -46,13 +46,14 @@ fun CategoriesGridLayout(
     itemCategoriesState: State<HomeCategoriesListState>,
     viewModel: AppHomeViewModel
 ) {
+    val context = LocalContext.current
     Box(modifier = Modifier.background(color = Color.White)) {
         Column(
             modifier = Modifier
                 .padding(bottom = 35.dp)
                 .background(color = Color.White)
         ) {
-            val context = LocalContext.current
+
 //            if (itemCategoriesState.value.data.isEmpty()) {
 //                repeat(4) {
 //                    HomeCategoriesShimmer()

@@ -34,6 +34,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import atef.stc.jetback.compose.HomeActivity
 import atef.stc.jetback.compose.basecompose.addBottomSheetToView
 import atef.stc.jetback.compose.home.EmailLinkVerificationSection
 import atef.stc.jetback.compose.home.HomeTopSectionForSearchAndLocation
@@ -55,7 +56,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun DetailsScreen(name: String?, viewModel: AppHomeViewModel) {
+fun DetailsScreen(name: String?, viewModel: AppHomeViewModel, activity: HomeActivity?) {
 //    Surface(color = Color.White, modifier = Modifier.fillMaxSize()) {
 //        Box(
 //            modifier = Modifier.fillMaxSize(),
@@ -174,11 +175,11 @@ fun DetailsScreen(name: String?, viewModel: AppHomeViewModel) {
                                                         coroutineScope,
                                                         itemCategoriesUiState,
                                                         {
-                                                            context.findActivity()
+                                                            activity
                                                                 ?.let {
                                                                     addBottomSheetToView(
                                                                         modalBottomSheetState = modalBottomSheetState,
-                                                                        viewGroup = context.findActivity()
+                                                                        viewGroup = activity
                                                                             .findViewById(
                                                                                 R.id.content
                                                                             ),
@@ -197,11 +198,11 @@ fun DetailsScreen(name: String?, viewModel: AppHomeViewModel) {
                                                 onViewAllClick = {
                                                     openExploreAllBottomSheet(
                                                         launchBottomSheet = {
-                                                            context.findActivity()
+                                                            activity
                                                                 ?.let {
                                                                     addBottomSheetToView(
                                                                         modalBottomSheetState = modalBottomSheetState,
-                                                                        viewGroup = context.findActivity()
+                                                                        viewGroup = activity
                                                                             .findViewById(
                                                                                 R.id.content
                                                                             ),
@@ -268,7 +269,12 @@ fun onClickItemCategories(
     launchBottomSheet: (modalBottomSheetState: ModalBottomSheetState) -> Unit,
     modalBottomSheetState: ModalBottomSheetState,
 ) {
-
+    openExploreAllBottomSheet(
+        launchBottomSheet,
+        modalBottomSheetState,
+        coroutineScope,
+        itemCategoriesUiState
+    )
 }
 
 internal fun Context.findActivity(): AppCompatActivity {

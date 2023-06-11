@@ -1,6 +1,8 @@
 package atef.stc.jetback.compose.models
 
 import android.os.Parcelable
+import atef.stc.jetback.compose.uistate.getDummyGroupItemCategoriesDetailsList
+import atef.stc.jetback.compose.uistate.getDummyItemCategories
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
@@ -42,5 +44,5 @@ data class ItemCategoriesDetails(
     var firebaseEventName: String? = null,
     @SerializedName("groupItemCategoriesDetails")
     @Expose
-    var groupItemCategoriesDetails: List<GroupItemCategoriesDetails>? = null
+    var groupItemCategoriesDetails: List<GroupItemCategoriesDetails>? = getDummyGroupItemCategoriesDetailsList()
 ) : Parcelable, BaseResponse()
