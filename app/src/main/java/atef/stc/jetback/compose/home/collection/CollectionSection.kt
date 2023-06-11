@@ -18,6 +18,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.unit.dp
+import atef.stc.jetback.compose.basecompose.GrayBrush
 import atef.stc.jetback.compose.basecompose.TitleSubViewAll
 import atef.stc.jetback.compose.models.CollectionsModel
 import atef.stc.jetback.compose.uistate.CollectionsUIState
@@ -34,11 +35,11 @@ fun CollectionSection(
     collectionsUiState.sectionDetails?.backgroundColor?.parseColor()?.let { bgColor ->
         boxBackgroundColor = bgColor
     }
-//    if(collectionsUiState.isLoading){
-//        CollectionsShimmerList(
-//            brush = GrayBrush()
-//        )
-//    } else if(collectionsUiState.data.isNotEmpty()) {
+    if(collectionsUiState.isLoading){
+        CollectionsShimmerList(
+            brush = GrayBrush()
+        )
+    } else if(collectionsUiState.data.isNotEmpty()) {
         Card(shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)) {
             Box(
                 modifier = modifier
@@ -50,7 +51,7 @@ fun CollectionSection(
                     onCollectionClicked = onCollectionClicked
                 )
             }
-//        }
+        }
     }
 }
 

@@ -21,6 +21,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import atef.stc.jetback.compose.basecompose.GrayBrush
 import atef.stc.jetback.compose.basecompose.TitleSubViewAll
 import atef.stc.jetback.compose.models.SectionDetails
 import atef.stc.jetback.compose.models.TopBrand
@@ -38,11 +39,11 @@ fun TopBrandsListSection(
     topBrandsListState.sectionDetails?.backgroundColor?.parseColor()?.let { bgColor ->
         boxBackgroundColor = bgColor
     }
-//    if (topBrandsListState.isLoading) {
-//        TopBrandsShimmerList(
-//            brush = GrayBrush()
-//        )
-//    } else if (topBrandsListState.topBrands.isNotEmpty()) {
+    if (topBrandsListState.isLoading) {
+        TopBrandsShimmerList(
+            brush = GrayBrush()
+        )
+    } else if (topBrandsListState.topBrands.isNotEmpty()) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -63,7 +64,7 @@ fun TopBrandsListSection(
                 onClickViewAll = onClickViewAll
             )
         }
-//    }
+    }
 }
 
 @OptIn(ExperimentalComposeUiApi::class)

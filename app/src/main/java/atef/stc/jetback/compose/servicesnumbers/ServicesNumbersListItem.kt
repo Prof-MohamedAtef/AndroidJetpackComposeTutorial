@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import atef.stc.jetback.compose.basecompose.BaseText
 import atef.stc.jetback.compose.models.ServiceNumberModel
 /*
-
+    create such file for any list item passing the model that you need
  */
 @Composable
 fun ServicesNumbersListItem(serviceNumberModel: ServiceNumberModel) {

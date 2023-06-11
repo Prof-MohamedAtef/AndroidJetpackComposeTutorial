@@ -38,11 +38,11 @@ fun HomeCategoriesSection(
     onViewAllClick: (() -> Unit)?,
 ) {
     val itemCategoriesUiState = viewModel.itemCategoriesUiState.collectAsStateWithLifecycle().value
-//    if (itemCategoriesUiState.isLoading) {
-//        HomeCategoriesShimmer()
-//    } else if (itemCategoriesUiState.data.isNotEmpty()) {
+    if (itemCategoriesUiState.isLoading) {
+        HomeCategoriesShimmer()
+    } else if (itemCategoriesUiState.data.isNotEmpty()) {
     Content(itemCategoriesUiState, onClickItemCategories, onViewAllClick)
-//    }
+    }
 }
 
 @OptIn(ExperimentalComposeUiApi::class)

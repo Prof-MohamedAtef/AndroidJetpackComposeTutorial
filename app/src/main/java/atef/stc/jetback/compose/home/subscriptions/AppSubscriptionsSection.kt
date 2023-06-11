@@ -24,6 +24,7 @@ import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import atef.stc.jetback.compose.R
+import atef.stc.jetback.compose.basecompose.GrayBrush
 import atef.stc.jetback.compose.home.PageIndicator
 import atef.stc.jetback.compose.basecompose.TitleSubViewAll
 import atef.stc.jetback.compose.models.AdModel
@@ -45,11 +46,11 @@ fun SmilesSubscriptionSection(
     smilesSubState.sectionDetails?.backgroundColor?.parseColor()?.let {bgColor ->
         boxBackgroundColor = bgColor
     }
-//    if (smilesSubState.isLoading){
-//        SubscriptionsShimmer(
-//            brush = GrayBrush()
-//        )
-//    }else if (smilesSubState.data.isNotEmpty() || (!smilesSubState.foodOrderBanner?.subscriptionImage.isNullOrEmpty())) {
+    if (smilesSubState.isLoading){
+        SubscriptionsShimmer(
+            brush = GrayBrush()
+        )
+    }else if (smilesSubState.data.isNotEmpty() || (!smilesSubState.foodOrderBanner?.subscriptionImage.isNullOrEmpty())) {
         Box(
             modifier = Modifier
                 .semantics {
@@ -81,7 +82,7 @@ fun SmilesSubscriptionSection(
                 AdsIndicator(pageState)
             }
         }
-//    }
+    }
 }
 
 @Composable

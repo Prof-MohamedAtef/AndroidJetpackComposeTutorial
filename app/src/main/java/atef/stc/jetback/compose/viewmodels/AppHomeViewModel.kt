@@ -46,18 +46,18 @@ class AppHomeViewModel  @Inject constructor(
     val smileSubscriptionUiState = _smileSubscriptionUiState.asStateFlow()
 
     private var _birthdayGift =
-        MutableStateFlow<BirthdayGiftUiState>(BirthdayGiftUiState())
+        MutableStateFlow(BirthdayGiftUiState())
     val birthdayGift = _birthdayGift.asStateFlow()
 
     private var _servicesNumbersUiState =
-        MutableStateFlow<ServicesNumbersUiState>(ServicesNumbersUiState())
+        MutableStateFlow(ServicesNumbersUiState())
     val servicesNumbersUiState = _servicesNumbersUiState.asStateFlow()
 
     fun getSections() {
         _screenUiState.update {
             it.copy(isLoading = true, isPullRefreshing = true)
         }
-        makeDelayAfter(4000)
+        makeDelayAfter(8000)
     }
 
     fun makeDelayAfter(interval: Long){
