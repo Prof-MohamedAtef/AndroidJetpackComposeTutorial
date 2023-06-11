@@ -20,36 +20,36 @@ fun getDummyTopBrandsList() : List<TopBrand> {
         TopBrand(
             title = "PIZZA and BROCCOLI",
             description = "Two liner description goes here",
-            imageUrl = "https://car-images.bauersecure.com/wp-images/2697/best_electric_2022.jpg"
+            imageUrl = "https://www.celebritycruises.com/blog/content/uploads/2020/12/famous-landmarks-in-europe-paris-france.jpg"
         ),
         TopBrand(
             title = "PIZZA and BROCCOLI",
             description = "Two liner description goes here",
-            imageUrl = "https://smilesuae.ae/images/APP/FRESCO/TOP_BRANDS/Logo-4.png"
+            imageUrl = "https://kfcprodnecmsimage.azureedge.net/cmsimages/kfc//egy/desktop//imagestemp/56-Combo.png"
         ),TopBrand(
             title = "PIZZA and BROCCOLI",
             description = "Two liner description goes here",
-            imageUrl = "https://smilesuae.ae/images/APP/FRESCO/TOP_BRANDS/Logo-4.png"
+            imageUrl = "https://kfcprodnecmsimage.azureedge.net/cmsimages/kfc/egy/imagestemp/510050.png"
         ),TopBrand(
             title = "PIZZA and BROCCOLI",
             description = "Two liner description goes here",
-            imageUrl = "https://car-images.bauersecure.com/wp-images/2697/best_electric_2022.jpg"
+            imageUrl = "https://kfcprodnecmsimage.azureedge.net/cmsimages/kfc/egy/imagestemp/600001.png"
         ),TopBrand(
             title = "PIZZA and BROCCOLI",
             description = "Two liner description goes here",
-            imageUrl = "https://smilesuae.ae/images/APP/FRESCO/TOP_BRANDS/Logo-4.png"
+            imageUrl = "https://kfcprodnecmsimage.azureedge.net/cmsimages/kfc/egy/imagestemp/600030.png"
         ),TopBrand(
             title = "PIZZA and BROCCOLI",
             description = "Two liner description goes here",
-            imageUrl = "https://smilesuae.ae/images/APP/FRESCO/TOP_BRANDS/Logo-4.png"
+            imageUrl = "https://kfcprodnecmsimage.azureedge.net/cmsimages/kfc/egy/imagestemp/511006.png"
         ),TopBrand(
             title = "PIZZA and BROCCOLI",
             description = "Two liner description goes here",
-            imageUrl = "https://car-images.bauersecure.com/wp-images/2697/best_electric_2022.jpg"
+            imageUrl = "https://kfcprodnecmsimage.azureedge.net/cmsimages/kfc//egy//imagestemp/811701.png"
         ),TopBrand(
             title = "PIZZA and BROCCOLI",
             description = "Two liner description goes here",
-            imageUrl = "https://smilesuae.ae/images/APP/FRESCO/TOP_BRANDS/Logo-4.png"
+            imageUrl = "https://kfcprodnecmsimage.azureedge.net/cmsimages/kfc/egy/desktop/imagestemp/110005.png"
         )
     )
 }
